@@ -1,11 +1,41 @@
 // This file contains the tic-tac-toe board and the game logic
 import React from 'react';
 import './css/board.css';
-import { uesState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Board = ({ reset, setReset, winner, setWinner }) => {
 
-    
+    // Creating a turn state, which indicates the current turn
+    const [turn, setTurn] = useState(0);
+
+    // Creating a data state, which contains the 
+    // current picture of the board
+    const [data, setData] = useState(['', '', '', '', '', '', '', '', '']);
+
+    // Creating a reference for the board
+    const boardRef = useRef(null);
+
+    // Function to draw on the board
+    const draw = (event, index) => {
+        // Draws only if the position is not taken 
+        // and winner is not decided yet
+        if(data[index - 1] === '' && winner === '') {
+            
+            // Draws X if it's player 1's turn else draws O
+            const current = turn === 0 ? "X" : "O" ;
+
+            // Updating the data state
+            data[index - 1] = current;
+
+            //Drawing on the board
+            event.target.innerText = current;
+
+            // Switching the turn
+            setTurn(turn===0 ? 1 : 0);
+        }
+    }
+
+
 
     return (
         <div ref={boardRef} className='board'>
