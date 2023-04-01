@@ -86,9 +86,41 @@ button:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
-  
-@media (min-width: 768px) {
-    button {
-    padding: .75rem 1.5rem;
+
+/* Responsive */
+
+@media screen and (max-width: 950px) {
+	.winner {
+        width: 30vw;
+        border-radius: 6%;
     }
-};
+    .winner-text{   
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    button {
+        padding: .75rem 1.5rem;
+        }
+}
+
+@media screen and (max-width: 550px) {
+	.winner {
+        width: 40vw;
+        border-radius: 6%;
+    }
+    .winner-text{   
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 388px) {
+	.winner {
+        width: 60vw;
+        border-radius: 6%;
+    }
+    .winner-text{   
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+}

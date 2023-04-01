@@ -14,10 +14,39 @@
 	font-size: 1.5rem;
 	justify-content: center;
 	align-items: center;
-	width: 10vw;
+	width: 12vw;
 	cursor: default;
 }
 
-/* .player:hover{
-	color:#008080;
-} */
+@media screen and (max-width: 950px) {
+	.info {
+		width: 60vw;
+	}
+
+	.player {
+		width: 25vw;
+	}
+}
+
+
+@media screen and (max-width: 550px) {
+	.info {
+		width: 80vw;
+	}
+
+	.player {
+		width: 35vw;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 255px) {
+	.info {
+		width: 90vw;
+	}
+
+	.player {
+		width: 40vw;
+		font-size: 0.8rem;
+	}
+}

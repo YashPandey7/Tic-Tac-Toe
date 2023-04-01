@@ -28,16 +28,19 @@ function App() {
                 {/* Display the current winner */}
                 <div className='winner-text'>{winner}</div>
                 {/* Button used to reset the board */}
-                <button onClick={()=> {resetBoard()}}>
+                <button onClick={() => { resetBoard() }}>
                     Reset Board
                 </button>
             </div>
 
             {/* Custom made board component comprising of 
-            the tic-tac-toe board  */} 
+            the tic-tac-toe board  */}
             {/* Passing Props reset,setReset,winner,setWinner to Board component */}
             <Board reset={reset} setReset={setReset} winner={winner} setWinner={setWinner} />
             <Info />
+            <button onClick={() => { resetBoard() }}>
+                Reset Board
+            </button>
 
         </div>
     );
