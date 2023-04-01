@@ -71,6 +71,7 @@
 
   .board {
     width: 50vw;
+    height: 45%;
   }
 
   .input {
@@ -87,6 +88,7 @@
 
   .board {
     width: 70vw;
+    height: 40%;
   }
 
   .input {

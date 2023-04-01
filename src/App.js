@@ -23,6 +23,7 @@ function App() {
 
     return (
         <div className="App">
+            <p className='heading'>Tic Tac Toe Game</p>
             {/* Shrinks the popup when there is no winner */}
             <div className={`winner ${winner !== '' ? '' : 'shrink'}`}>
                 {/* Display the current winner */}
